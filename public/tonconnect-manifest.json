@@ -1,0 +1,8 @@
+{
+    "name": "Airdrop App",
+    "description": "Connect to the Ton blockchain to claim your airdrop!",
+    "icons": [
+      "http://localhost:3000/icon.png"
+    ],
+    "api_version": "2.0"
+  }
