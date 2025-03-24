@@ -7,6 +7,5 @@ export default defineConfig({
   server: {
     https: false, // Allow HTTP
     allowedHosts: true,
-    port: 3000
   },
 })
