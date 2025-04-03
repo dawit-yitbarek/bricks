@@ -1,5 +1,4 @@
 import { defineConfig } from 'vite';
-import react from '@vitejs/plugin-react';
 
 export default defineConfig({
   resolve: {
@@ -10,9 +9,11 @@ export default defineConfig({
   optimizeDeps: {
     include: ['buffer'],
   },
-  plugins: [react()],
   server: {
     host: '0.0.0.0',
-    port: 3000
-  }
+    port: process.env.PORT || 4173,
+  },
+  preview: {
+    allowedHosts: ['bricks-1i79.onrender.com'],
+  },
 });
