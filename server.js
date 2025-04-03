@@ -408,6 +408,7 @@ app.post("/disconnect-wallet", async (req, res) => {
 
     if (result.rows.length === 0) {
       return res.json({ success: false, message: "Invalid or expired verification token" });
+      console.log("token expired");
     }
 
     const userId = result.rows[0].user_id;
@@ -480,6 +481,6 @@ app.use((err, req, res, next) => {
   res.status(500).send('Something broke!');
 });
 
-app.listen(port, () => {
+app.listen(port, '0.0.0.0', () => {
   console.log(`Server is running on port ${port}`);
 });
