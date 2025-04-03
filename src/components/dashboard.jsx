@@ -4,14 +4,14 @@ import { WalletMultiButton } from "@solana/wallet-adapter-react-ui";
 import { useNavigate } from "react-router-dom";
 import api from "./Api";
 
-function Home() {
-    const [email, setEmail] = useState("no email");
+function Dashboard() {
+    const [email, setEmail] = useState("---");
     const { isRegistered, updateRegistrationStatus} = useContext(AuthContext);
     const navigate = useNavigate()
     useEffect(()=>{
         async function fetchData(){
             try {
-                const response = await api.get("http://localhost:3000/home")
+                const response = await api.get("http://localhost:3000/dashboard")
                 if (!response.data.registered) {
                     navigate("/signin")
                 }
@@ -45,5 +45,6 @@ function Home() {
 
 }
 
-export default Home;
+export default Dashboard;
+
 

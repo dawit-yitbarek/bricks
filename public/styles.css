@@ -11,6 +11,7 @@ body {
   padding: 0 16px;
 }
 
+
 header {
   background-color: #f5ba13;
   margin: auto -16px;
@@ -22,6 +23,25 @@ header h1 {
   color: #fff;
   font-family: "McLaren", cursive;
   font-weight: 200;
+}
+
+.register-form, .signin-form{
+  border: 2px solid red;
+}
+
+.input-contain{
+  display: block;
+  padding: 10px;
+  margin: 10px;
+}
+
+.register-btn{
+  padding: 5px;
+  height: 20px;
+  width: 50px;
+  border: none;
+  background-color: coral;
+  color: black;
 }
 
 footer {
