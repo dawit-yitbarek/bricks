@@ -42,15 +42,15 @@ app.use(
     resave: false,
     saveUninitialized: false,
     cookie: {
-      maxAge: 30 * 24 * 60 * 60 * 1000, // 30 days
-      // secure: process.env.NODE_ENV === 'production', // Use in production with HTTPS
+      maxAge: 30 * 24 * 60 * 60 * 1000,
+      secure: process.env.NODE_ENV === 'production',
       httpOnly: true
-    }
+    }    
   })
 );
 
 app.use(cors({
-  origin: ['http://localhost:5173', 'https://bricksapp.loca.lt'],
+  origin: ['http://localhost:5173', 'https://bricks-1i79.onrender.com'],
   credentials: true
 }));
 
@@ -357,7 +357,7 @@ app.post("/disconnect-wallet", async (req, res) => {
      {
        clientID: process.env.GOOGLE_CLIENT_ID,
        clientSecret: process.env.GOOGLE_CLIENT_SECRET,
-       callbackURL: "http://localhost:3000/auth/google/dashboard",
+       callbackURL: "https://bricks-1i79.onrender.com/auth/google/dashboard",
        userProfileURL: "https://www.googleapis.com/oauth2/v3/userinfo",
      },
      async (accessToken, refreshToken, profile, cb) => {
